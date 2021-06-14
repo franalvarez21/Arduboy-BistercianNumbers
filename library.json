@@ -1,0 +1,21 @@
+{
+  "name": "Arduboy-BistercianNumbers",
+  "description": "Tiny 4x4 Numerical Display for Arduboy.",
+  "keywords": "arduboy, numbers, tiny, 4x4, display",
+  "authors":
+  {
+      "name": "Francisco Alvarez",
+      "email": "franalvarez21@gmail.com",
+      "url": "https://github.com/franalvarez21/Arduboy-BistercianNumbers",
+      "maintainer": true
+  },
+
+  "repository":
+  {
+      "type": "git",
+      "url": "https://github.com/franalvarez21/Arduboy-BistercianNumbers"
+  },
+  "version": "1.0",
+  "license": "MIT",
+  "examples": "examples/BistercianSample/BistercianSample.ino"
+}
