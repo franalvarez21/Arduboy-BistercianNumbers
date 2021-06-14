@@ -12,10 +12,10 @@ void Bistercian::print(int32_t number)
   }
 }
 
-void Bistercian::setCursor(int16_t x, int16_t y)
+void Bistercian::setCursor(int16_t cursorX, int16_t cursorY)
 {
-  cursorX = x;
-  cursorY = y;
+  this->cursorX = cursorX;
+  this->cursorY = cursorY;
 }
 
 int16_t Bistercian::getCursorX() const
@@ -38,69 +38,68 @@ uint8_t Bistercian::getTextColor() const
   return color;
 }
 
-void Bistercian::printDigit(int32_t number, uint8_t division)
+void Bistercian::printDigit(int32_t number, uint8_t sector)
 {
   switch (number)
   {
   case 0:
-    drawPixel(2, 1, 0, 3, division);
+    drawPixel(2, 1, 0, 3, sector);
     break;
   case 1:
-    drawPixel(3, 0, 0, 3, division);
+    drawPixel(3, 0, 0, 3, sector);
     break;
   case 2:
-    drawPixel(2, 1, 1, 2, division);
+    drawPixel(2, 1, 1, 2, sector);
     break;
   case 3:
-    drawPixel(3, 0, 1, 2, division);
+    drawPixel(3, 0, 1, 2, sector);
     break;
   case 4:
-    printDigit(0, division);
-    printDigit(3, division);
+    printDigit(0, sector);
+    printDigit(3, sector);
     break;
   case 5:
-    printDigit(1, division);
-    printDigit(3, division);
+    printDigit(1, sector);
+    printDigit(3, sector);
     break;
   case 6:
-    printDigit(2, division);
-    printDigit(3, division);
+    printDigit(2, sector);
+    printDigit(3, sector);
     break;
   case 7:
-    printDigit(0, division);
-    printDigit(2, division);
-    printDigit(3, division);
+    printDigit(0, sector);
+    printDigit(2, sector);
+    printDigit(3, sector);
     break;
   case 8:
-    printDigit(1, division);
-    printDigit(2, division);
-    printDigit(3, division);
+    printDigit(1, sector);
+    printDigit(2, sector);
+    printDigit(3, sector);
     break;
   case 9:
-    printDigit(0, division);
-    printDigit(1, division);
-    printDigit(2, division);
-    printDigit(3, division);
+    printDigit(0, sector);
+    printDigit(1, sector);
+    printDigit(2, sector);
+    printDigit(3, sector);
     break;
   }
 }
 
-void Bistercian::drawPixel(uint8_t x, uint8_t x2, uint8_t y, uint8_t y2, uint8_t division)
+void Bistercian::drawPixel(uint8_t x, uint8_t x2, uint8_t y, uint8_t y2, uint8_t sector)
 {
-  if (division == 0)
+  switch (sector)
   {
+  case 0:
     arduboy->drawPixel(cursorX + x, cursorY + y, color);
-  }
-  else if (division == 1)
-  {
+    break;
+  case 1:
     arduboy->drawPixel(cursorX + x2, cursorY + y, color);
-  }
-  else if (division == 2)
-  {
+    break;
+  case 2:
     arduboy->drawPixel(cursorX + x, cursorY + y2, color);
-  }
-  else if (division == 3)
-  {
+    break;
+  case 3:
     arduboy->drawPixel(cursorX + x2, cursorY + y2, color);
+    break;
   }
 }

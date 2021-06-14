@@ -1,4 +1,4 @@
-# https://github.com/franalvarez21/Arduboy-BistercianNumericalFont
+# https://github.com/franalvarez21/Arduboy-BistercianNumbers
 
 #######################################
 # Datatypes (KEYWORD1)

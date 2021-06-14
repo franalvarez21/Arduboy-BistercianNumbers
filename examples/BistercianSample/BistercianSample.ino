@@ -1,5 +1,5 @@
-
-#include "src/Bistercian.h"
+#include <Arduboy2.h>
+#include "Bistercian.h"
 
 Arduboy2Base arduboy;
 Bistercian bistercian(&arduboy);
@@ -13,7 +13,7 @@ void loop()
 {
   arduboy.clear();
 
-  // display values from 0 to 99
+  // Display values from 0 to 99
   uint32_t number = 0;
   for (size_t x = 0; x < 25; x++)
   {
@@ -25,7 +25,7 @@ void loop()
     }
   }
 
-  // display other values
+  // Display values found in the numerical_chart.png example
   bistercian.setCursor(5 * 5, 6 * 10);
   bistercian.print(1992);
   bistercian.setCursor(7 * 5, 6 * 10);

@@ -1,6 +1,6 @@
 {
   "name": "Arduboy-BistercianNumbers",
-  "description": "Tiny 4x4 Numerical Display for Arduboy.",
+  "description": "Tiny 4x4 Bistercian Numerical Display for the Arduboy game system.",
   "keywords": "arduboy, numbers, tiny, 4x4, display",
   "authors":
   {
