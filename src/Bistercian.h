@@ -37,6 +37,11 @@ private:
      */
   void drawPixel(uint8_t x, uint8_t x2, uint8_t y, uint8_t y2, uint8_t sector);
 
+  /** \brief
+     * Private function. Print each pixel by sector by size.
+     */
+  void drawPixelBySize(uint8_t x, uint8_t y, uint8_t sector);
+
 public:
   /** \brief
      * Constructor for th Bistercian class. Required the reference to the arduboy2 instance.
@@ -45,7 +50,10 @@ public:
      *
      * \param arduboy Pointer to the Arduboy2 or Arduboy2Base instance.
      */
-  Bistercian(Arduboy2Base *arduboy) : cursorX(0), cursorY(0), color(1) { this->arduboy = arduboy; };
+  Bistercian(Arduboy2Base *arduboy) : cursorX(0), cursorY(0), color(1)
+  {
+    this->arduboy = arduboy;
+  };
 
   /** \brief
      * Draws a number in bistercian.
@@ -83,18 +91,18 @@ public:
   int16_t getCursorY() const;
 
   /** \brief
-     * Set the text color.
+     * Set the color.
      *
      * \param color The color for the pixels draw by the drawPixel function.
      */
-  void setTextColor(uint8_t color);
+  void setColor(uint8_t color);
 
   /** \brief
-     * Get the text color.
+     * Get the color.
      *
      * \return The color used by the drawPixel function.
      */
-  uint8_t getTextColor() const;
+  uint8_t getColor() const;
 };
 
 #endif

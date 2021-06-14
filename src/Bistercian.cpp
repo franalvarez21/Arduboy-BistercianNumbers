@@ -28,12 +28,12 @@ int16_t Bistercian::getCursorY() const
   return cursorY;
 }
 
-void Bistercian::setTextColor(uint8_t color)
+void Bistercian::setColor(uint8_t color)
 {
   this->color = color;
 }
 
-uint8_t Bistercian::getTextColor() const
+uint8_t Bistercian::getColor() const
 {
   return color;
 }
