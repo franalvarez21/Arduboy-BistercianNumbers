@@ -1,8 +1,8 @@
 
-#include <Arduboy2.h>
-
 #ifndef BISTERCIAN_H
 #define BISTERCIAN_H
+
+#include <Arduboy2.h>
 
 /**
  * Bistercian uses a 4x4 space to draw a number.
@@ -19,7 +19,6 @@
 class Bistercian
 {
 private:
-  Arduboy2Base *arduboy;
   int16_t cursorX;
   int16_t cursorY;
   uint8_t color;
@@ -44,16 +43,11 @@ private:
 
 public:
   /** \brief
-     * Constructor for th Bistercian class. Required the reference to the arduboy2 instance.
+     * Constructor for th Bistercian class.
      * cursorX and cursorY are set to 0 by default.
      * the color used is WHITE by default (1).
-     *
-     * \param arduboy Pointer to the Arduboy2 or Arduboy2Base instance.
      */
-  Bistercian(Arduboy2Base *arduboy) : cursorX(0), cursorY(0), color(1)
-  {
-    this->arduboy = arduboy;
-  };
+  Bistercian() : cursorX(0), cursorY(0), color(1){};
 
   /** \brief
      * Draws a number in bistercian.

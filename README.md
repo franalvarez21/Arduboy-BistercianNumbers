@@ -12,15 +12,13 @@ Cistercian single digits numbers go from 1 to 9, but to allow bigger numbers (on
 
 ## Usage:
 
-Make an instance of Bistercian passing the Arduboy instance as reference. Both Arduboy2Base and Arduboy2 are accepted.
 Set the pixel coordinates with setCursor() where you want to draw the 4x4 number.
 Draw the number using print();
 
 ```cpp  
 #include "Bistercian.h"
 
-Arduboy2Base arduboy;
-Bistercian bistercian(&arduboy);
+Bistercian bistercian;
 
 bistercian.setCursor(5, 5);
 bistercian.print(259);

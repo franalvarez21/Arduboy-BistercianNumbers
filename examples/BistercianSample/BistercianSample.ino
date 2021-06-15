@@ -2,7 +2,7 @@
 #include "Bistercian.h"
 
 Arduboy2Base arduboy;
-Bistercian bistercian(&arduboy);
+Bistercian bistercian;
 
 void setup()
 {

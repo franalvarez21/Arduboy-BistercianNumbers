@@ -90,16 +90,16 @@ void Bistercian::drawPixel(uint8_t x, uint8_t x2, uint8_t y, uint8_t y2, uint8_t
   switch (sector)
   {
   case 0:
-    arduboy->drawPixel(cursorX + x, cursorY + y, color);
+    Arduboy2Base::drawPixel(cursorX + x, cursorY + y, color);
     break;
   case 1:
-    arduboy->drawPixel(cursorX + x2, cursorY + y, color);
+    Arduboy2Base::drawPixel(cursorX + x2, cursorY + y, color);
     break;
   case 2:
-    arduboy->drawPixel(cursorX + x, cursorY + y2, color);
+    Arduboy2Base::drawPixel(cursorX + x, cursorY + y2, color);
     break;
   case 3:
-    arduboy->drawPixel(cursorX + x2, cursorY + y2, color);
+    Arduboy2Base::drawPixel(cursorX + x2, cursorY + y2, color);
     break;
   }
 }
